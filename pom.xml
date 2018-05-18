@@ -1,0 +1,38 @@
+<project>
+        <modelVersion>4.0.0</modelVersion>
+
+        <groupId>org.tektutor</groupId>
+        <artifactId>tektutor-couchbasejavasdk-demo</artifactId>
+        <version>1.0.0</version>
+
+        <dependencies>
+                <dependency>
+                        <groupId>com.couchbase.client</groupId>
+                        <artifactId>java-client</artifactId>
+                        <version>2.5.8</version>
+                </dependency>
+        </dependencies>
+
+        <build>
+                <plugins>
+                        <plugin>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>exec-maven-plugin</artifactId>
+                                <version>1.6.0</version>
+                                <executions>
+                                        <execution>
+                                                <id>execute_app</id>
+                                                <phase>test</phase>
+                                                <goals>
+                                                        <goal>java</goal>
+                                                </goals>
+                                                <configuration>
+                                                        <mainClass>org.tektutor.Main</mainClass>
+                                                </configuration>
+                                        </execution>
+                                </executions>
+                        </plugin>
+                </plugins>
+        </build>
+</project>
+
